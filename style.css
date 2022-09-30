@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    justify-items: center;    
+    background-color: black;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    /*background-color: black;*/
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px  20px;
+    background: rgb(4,4,4);
+background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.9248074229691877) 50%, rgba(9,9,9,0.9248074229691877) 100%);
+    
+}
+
+.logos-name{
+    display: flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    gap: 10px;
+}
+
+.menu{
+    display: none;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /*background-color: rgb(1, 26, 26);*/
+    position: absolute;
+    z-index: 10;
+    gap: 20px;
+    left: 0;
+    top: 80px;
+    padding: 5px  20px  5px  20px;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,85,147,0.9248074229691877) 28%, rgba(2,85,147,0.7287289915966386) 66%, rgba(9,9,9,0.9248074229691877) 100%);
+}
+
+#menu{
+    display: none;
+}
+
+#menu:checked ~ nav .menu{
+    display: grid;
+}
+
+
+.menu div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.menu div a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0 5px 0 5px;
+}
+
+.menu div a:nth-child(1){
+    color: aliceblue;
+    font-size: 18px;
+}
+
+
+/* --------------body --------------*/ 
+.principal{
+    display: flex;
+    height: 500px;
+    background: url(./assets/principal/f.elconfidencial.com_original_69c_a77_1ac_69ca771ac641bbad75e91c4a578bc36d.jpg);
+    background-size: cover;
+}
+.principal img{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.principal--opaco{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+
+}
+.principal--info{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 500px;
+    position: absolute;
+    z-index: 3;
+    bottom: 110px;
+    right: 120px;
+    text-align: end;
+}
+
+.principal--info h1{
+    font-size: 50px;
+}
+.principal--info p{
+    font-size: 20px;
+}
+
+
