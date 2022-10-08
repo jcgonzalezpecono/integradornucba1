@@ -1,0 +1,169 @@
+@media     (min-width: 0px) and (max-width: 599px){
+    /*-----------menu----------------*/  
+
+    .menu-mq-ls{
+        display: none;
+    }
+
+    .menu{
+        grid-template-columns:  repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-items: center;
+       
+    }
+
+    /*--------login  y contactenos ----------------*/  
+    .login{
+        padding: 25px;
+    }
+     .contactenos{
+        padding: 5px;  
+      
+    }
+
+    .login form,
+    .contactenos form{
+        padding: 60x;
+        font-size: 20px;
+    }
+
+
+
+ 
+
+    .mq-ls-lm{
+        display: flex;
+        font-size: 40px;
+    }
+    .mq-lg{
+        display: none;
+    }
+
+    /*---------footer------*/
+    footer{
+        height: 20px;
+    }
+    /*-------- main  s1 -----*/ 
+
+    .principal{
+        height: 430px;
+    }
+    .principal--info{
+        bottom: 25px;  
+        right: 25px; 
+        text-align: end;
+        width: 400px;
+        
+    }
+    .principal--info h1{
+        font-size: 35px;
+
+    }
+
+    .secundario{
+        height: 430px;
+    }
+
+    /*---------s2------------*/
+    .conocenos{
+        height: 430px;
+
+    }
+
+    .conocenos--info {
+        width: 400px;
+        top: 20px;
+        left: 20px;
+    }
+    .conocenos--info h1{
+        font-size: 35px;
+        
+    }
+
+    
+    /*---------s3------------*/
+
+
+
+
+
+    .news{
+        grid-template-columns:  repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+
+    .menu--misiones h1{
+        display: none;
+    }
+
+
+    /*---------s4------------*/
+    
+    .liberwebb, .sur, .tele, .ees{
+        height: 400px;
+        background-size: 100% 100%;
+    }
+
+}
+
+
+@media   (min-width: 599px) and (max-width: 799px){
+ /*-----------menu----------------*/     
+    .menu-mq-ls{
+        display: none;
+    }
+
+    .menu{
+        grid-template-columns:  repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        justify-items: center;
+       
+    }
+
+     /*--------login  y contactenos ----------------*/  
+
+     .login{
+        padding: 25px;
+        margin-bottom: 50px;
+     } 
+     
+     .contactenos{
+        padding: 5px;  
+      
+    }
+
+    .login form,
+    .contactenos form{
+        padding: 60px;
+        font-size: 20px;
+    }
+
+    /*-------- header -----*/  
+    header h1{
+        font-size: 20px;
+    }
+
+    .news{
+        grid-template-columns:  repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .menu--misiones h1{
+        display: none;
+    }
+
+}
+
+@media   (min-width: 799px) and (max-width: 1023px){
+    .news{
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 0px;
+    }
+
+
+
+
+
+}

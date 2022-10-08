@@ -1,0 +1,30 @@
+@keyframes presentacio {
+    
+    0% {
+        opacity: 10%;
+        
+    }
+    100% {
+        opacity: 100%;
+        
+    }
+    
+}
+
+.principal{
+    animation-duration: 4s;
+    animation-name: presentacio;
+}
+.secundario{
+    animation-duration: 4s;
+    animation-name: presentacio;
+}
+
+    
+
+.liberwebb, .sur, .ees, .tele{
+    
+    animation-duration: 4s;
+    animation-name: presentacio;
+}
+

@@ -5,8 +5,88 @@
 }
 body{
     justify-items: center;    
-    background-color: black;
+    /*background-color: rgb(252, 252, 252);*/
+    background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.9248074229691877) 50%, rgba(9,9,9,0.9248074229691877) 100%);
+
 }
+
+/*--------------login--------------------*/
+.login{
+    display: block;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(6, 28, 77, 0.336);
+    padding: 120px;
+    
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    border:  1px solid white;
+    border-radius: 6px;
+    padding: 80px;
+    color: white;
+
+
+}
+
+
+
+
+#login:checked ~ .login{
+    display: block;
+}
+
+
+
+
+
+/*-------------------------------------*/
+
+/*---------------contactenos----------------------*/
+.contactenos{
+    display: none;
+    justify-self: center;
+    width: 100%;
+    height: 800px;
+    background-color: rgba(6, 28, 77, 0.774);
+    position: absolute;
+    z-index: 20;
+    padding: 140px;
+
+}
+
+.contactenos form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    border:  1px solid white;
+    border-radius: 6px;
+    padding: 80px;
+    color: white;
+}
+
+#contac:checked ~ .contactenos{
+    display: block;
+}
+
+#login, #contac{
+    appearence:none;
+    visibility: hidden;
+}
+
+/*-------------------------------------*/
+
+
+
+
 
 header{
     display: flex;
@@ -18,8 +98,20 @@ header{
     justify-content: space-between;
     padding: 0px 20px 0px  20px;
     background: rgb(4,4,4);
-background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.9248074229691877) 50%, rgba(9,9,9,0.9248074229691877) 100%);
+    background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.9248074229691877) 50%, rgba(9,9,9,0.9248074229691877) 100%);
+    position:fixed;
+    z-index:20;
     
+}
+
+main{
+    display: block;
+    position: relative;
+    top:44px;
+}
+
+.mq-ls-lm{
+    display: none;
 }
 
 .logos-name{
@@ -27,6 +119,10 @@ background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.92480742296
     color: rgb(255, 255, 255);
     align-items: center;
     gap: 10px;
+}
+
+.menu--ls{
+    display: none;
 }
 
 .menu{
@@ -44,7 +140,7 @@ background: linear-gradient(90deg, rgba(4,4,4,1) 0%, rgba(2,85,147,0.92480742296
     top: 80px;
     padding: 5px  20px  5px  20px;
     background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,85,147,0.9248074229691877) 28%, rgba(2,85,147,0.7287289915966386) 66%, rgba(9,9,9,0.9248074229691877) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,85,147,0.9248074229691877) 28%, rgba(2,85,147,0.7287289915966386) 66%, rgba(9,9,9,0.9248074229691877) 100%);
 }
 
 #menu{
@@ -73,37 +169,58 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,85,147,0.92480742296
     font-size: 18px;
 }
 
+.menu a:hover {
+    
+        transform: scale(1.05);
+        transition-duration: 1.2s;    
+
+    
+}
+
+
+
 
 /* --------------body --------------*/ 
+.portada{
+     background-color: black;
+    
+}
+
+
 .principal{
-    display: flex;
-    height: 500px;
+    display: none;
+    height: 550px;
     background: url(./assets/principal/f.elconfidencial.com_original_69c_a77_1ac_69ca771ac641bbad75e91c4a578bc36d.jpg);
-    background-size: cover;
+    background-size: 100% 120%;  
+    position: relative; 
+    z-index: 1;
 }
-.principal img{
-    position: relative;
-    width: 100%;
-    height: auto;
-}
+
 .principal--opaco{
     background-color: rgba(0, 0, 0, 0.6);
-    position: relative;
-    z-index: 2;
     width: 100%;
     height: auto;
-
+    position: relative;
+    z-index: 2;
+    
 }
+
 .principal--info{
     display: flex;
     flex-direction: column;
     color: aliceblue;
     width: 500px;
+    bottom: 50px;  
+    right: 50px; 
+    text-align: end;
+    align-items: flex-end;
+    gap: 9px;
     position: absolute;
     z-index: 3;
-    bottom: 110px;
-    right: 120px;
-    text-align: end;
+}
+.principal--info a{
+    font-size: 20px;
+    color: black;
 }
 
 .principal--info h1{
@@ -113,4 +230,322 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(2,85,147,0.92480742296
     font-size: 20px;
 }
 
+#principal{
+    display: flex;
+    position: absolute;
+    z-index: 18;
+    left: 15px;
+    top: 300px;
+}
 
+#principal:checked ~ .principal{
+    display: flex;
+}
+
+.secundario{
+    display: none;
+    height: 550px;
+    background: url(./assets/secundario/fotonoticia_20191120120159_1200.jpg);
+    background-size: 100% 120%;
+    position: relative; 
+    z-index: 1;
+   
+}
+
+#secundario{
+    display: flex;
+    position: absolute;
+    z-index: 17;
+    left: 15px;
+    top: 320px;
+}
+
+
+#secundario:checked ~ .secundario{
+    display: flex;
+}
+
+.secundario:active ~ .principal{
+    display: none;
+}
+
+.portada{
+    border-bottom: 5px groove rgba(71, 112, 143, 0.445);
+
+}
+
+/*---------------section news---------------*/
+
+.news{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 0 20px  0 20px;
+    justify-items: center;
+    
+}
+ 
+        
+.noticias{  
+    display: flex; 
+    margin-top: 10px;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    background: transparent;
+    background-size:cover ;
+    margin-bottom: 10px;
+    
+    
+    
+}
+.noticia{
+    display: flex;
+    flex-direction: column;  
+    border-radius: 4px;    
+    width: 400px;
+    height: 400px;
+    justify-items: center; 
+    gap:8px;     
+    background: linear-gradient(90deg, rgba(0,0,0,0.6502976190476191) 0%, rgba(2,85,147,0.9248074229691877) 0%, rgba(1,56,97,1) 100%, rgba(9,9,9,0.9248074229691877) 100%);
+        
+}
+
+.noticia img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.noticia--info{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 0 30px;
+    gap: 8px;
+}
+.noticia--info a{
+    color: rgb(15, 15, 15);
+    font-weight: 800;
+}
+
+.boton{
+    background-color:rgb(233, 142, 5);
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.noticia h1, .noticia p {
+    color: rgb(255, 255, 255);
+}
+
+.noticias--vermas{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.noticias--vermas a{
+    font-size: 25px;
+    width: 140px;
+}
+
+
+
+
+.div2 { 
+        grid-template-rows: repeat(3fr);
+     }
+.noticia:hover{ 
+    transform: scale(1.04);
+    transition-duration: 1.2s;    
+}
+
+/*---------section conocenos ------*/ 
+
+.conocenos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/conocenos/instalaciones.jpg);
+    background-size: 100% 100%;
+    height: 550px;
+    position: relative;
+    bottom: 0px;
+    z-index: 1;
+    
+    
+}
+
+.conocenos--info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 500px;
+    top: 100px;
+    z-index: 2;
+    left: 50px;
+    text-align: start;
+    gap: 20px;
+    
+}
+
+.conocenos--info h1{
+    color: white;
+    font-size: 40px;
+}
+
+.conocenos--info p{
+    color: white;
+    font-size: 20px;
+}
+
+.conocenos--info a{
+    font-size: 20px;
+    color: black;
+    width: 80px;
+}
+
+/*----final section ------*/  
+/*-------misiones -----------*/
+
+#Misiones{
+    padding: 30px;
+    
+
+}
+
+.menu--misiones{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    gap: 50px;
+    align-content: center;
+    align-items: center;
+    
+
+}
+
+.menu--misiones label{
+    justify-items: center;
+    text-align: center;
+
+}
+.menu--misiones label p{
+    color: white;
+}
+
+
+
+.menu--misiones h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.mi input{
+    appearence:none;
+    visibility: hidden;
+}
+
+.icono{
+    width: 80px;
+    height: 80px;
+}
+
+.mi{
+    position: relative;
+    z-index: 1;
+    
+}
+
+.liberwebb{
+    width: 100%;
+    height: 500px;
+    background: url(./assets/webb/sjwebb.jfif);
+    background-size: 100% 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: baseline;
+    color: white;
+    padding: 50px;
+}
+
+
+.sur{
+    width: 100%;
+    height: 500px;
+    background: url(./assets/hubble/HST-SM4.jpeg);
+    background-size: 100%  140% ;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: baseline;
+    color: white;
+    padding: 50px;
+    
+}
+.ees{
+    width: 100%;
+    height: 500px;
+    background: url(./assets/ees/ees1.jpg);
+    background-size:100% 150% ;
+    display: none;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-content:center;
+    color: rgb(17, 16, 16);
+    padding: 50px;
+    
+   
+}
+.tele{
+    width: 100%;
+    height: 500px;
+    background:url(./assets/telescopios/rtele1.jpg);
+    background-size: 100% 100% ;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: baseline;
+    color: white;
+    padding: 50px;
+    
+}
+
+#sur:checked ~ .sur{
+    display: flex;
+   
+}
+#ees:checked ~ .ees{
+    display: flex;
+    
+}
+#tele:checked ~ .tele{
+    display: flex;
+   
+}
+#liber:checked ~ .liberwebb{
+    display: flex;
+    
+}
+
+
+/*------------------footer--------------------*/  
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 50px;
+}
+
+.icono:hover{ 
+    transform: scale(1.05);
+    transition-duration: 1.2s;    
+}

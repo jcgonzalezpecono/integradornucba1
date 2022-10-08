@@ -4,67 +4,282 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALAM</title>
+    <title>FLAES</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./animaciones.css">
+    <link rel="stylesheet" href="./mediaquerys.css">
 </head>
 <body>
     <header>
         <div class="logos-name">
-            <img src="./assets/logo-alam.png" alt="logo-alam" width="70px" height="70px">
-            <h1>FEDERACION LATINOMAERICANA DE ACTIVIDAD ESPACIAL </h1>
+            <a href="./index.html"><img src="./assets/logo-alam.png" alt="logo-alam" width="70px" height="70px"></a>
+            <h1 class="mq-lg">FEDERACION LATINOMAERICANA DE ACTIVIDAD ESPACIAL </h1>
+            <h1 class="mq-ls-lm">FLAES </h1>
         </div>   
-        <label for="menu">
-            <i class="fa-sharp fa-solid fa-bars " style="color:white;" ></i>
-            <input type="checkbox" name="" id="menu">
-            <nav>
-                <ul class="menu">
-                    <div> 
-                        <a href="#" >Conocenos</a>
-                        <a href="#">Historia</a>
-                        <a href="#">Paises participantes</a>
-                        <a href="#">cooperacion</a>                    
-                    </div>                
-                    <div>
-                        <a href="#">Misiones</a>
-                        <a href="#">Telescopio liberwebb</a>
-                        <a href="#">Telescopio surbble</a>
-                        <a href="#">Estacion esapacial  Sudamericana </a>
-                        <a href="#">Observatorios astronomicos</a>                    
+            
+        <div style="display: flex; gap: 15px;">
+            <a href="./index.html"><i class="fa-sharp fa-solid fa-house" style="color: white;" > </i></a>
+            <label for="menu">            
+                <i class="fa-sharp fa-solid fa-bars " style="color:white;" ></i>
+                <input type="checkbox" name="" id="menu">
+                <nav>
+                    <div class="menu--ls"> <!---menu ls --> 
+                        
                     </div>
-                    <div>
-                        <a href="#">Cosmos</a>
-                        <a href="#">Galaxias</a>
-                        <a href="#">nebulosas</a>
-                        <a href="#">Mas  </a>                    
-                    </div>
-                    <div>
-                        <a href="#">Academia</a>
-                        <a href="#">Universidad latinomericana de investigacion espacial</a>
-                        <a href="#">Revista FLAES</a>
-                        <a href="#">investigaciones</a>                    >
-                    </div>
-                    <div>
-                        <a href="#">Proyectos</a>
-                        <a href="#">Defensa </a>
-                        <a href="#">Cooperacion </a>
-                        <a href="#">social</a>
-                </ul>   
-            </nav>          
-        </label>                     
-    </header>
+                    <div class="menu"> 
+                        <div> 
+                            <a href="#conocenos" >Conocenos</a>
+                            <a href="#" class="menu-mq-ls">Historia</a>
+                            <a href="#" class="menu-mq-ls">Paises participantes</a>
+                            <a href="#" class="menu-mq-ls">cooperacion</a>                    
+                        </div>       
+                        <div>
+                            <a href="#Noticias--section">Noticias</a>
+                            <a href="#" class="menu-mq-ls">Universidad latinomericana de investigacion espacial</a>
+                            <a href="#" class="menu-mq-ls">Revista FLAES</a>
+                            <a href="#" class="menu-mq-ls">investigaciones</a> 
+                            
+                        </div>         
+                        <div>
+                            <a href="#Misiones">Misiones</a>
+                            <a href="#" class="menu-mq-ls">Telescopio liberwebb</a>
+                            <a href="#" class="menu-mq-ls">Telescopio surbble</a>
+                            <a href="#" class="menu-mq-ls">Estacion esapacial  Sudamericana </a>
+                            <a href="#" class="menu-mq-ls">Observatorios astronomicos</a>                    
+                        </div>
+                        <div>
+                            <a href="#" class="menu-mq-ls">Cosmos</a>
+                            <a href="#" class="menu-mq-ls">Galaxias</a>
+                            <a href="#" class="menu-mq-ls">Nebulosas</a>
+                            <a href="#" class="menu-mq-ls">Mas  </a>                    
+                        </div>                        
+                        <div>
+                            <a href="./login.html"> Inicie sesion </a>
+                             <label for="contac"><a> Contactenos </a></label>  
+                        </div> 
 
-    <main>
-        <section>
-            <div class="principal">
-                <div class="principal--opaco"></div>
-                <div class="principal--info perro"  >
-                        <h1>Cooperación con la  Estacion internacional</h1>
-                        <p>Desde el  2028 FLAES cooperará con la ISS  en investigacion y desarrollo de modulos habitaciones.</p>
+
+                    </div>  
+                </nav>          
+            </label>  
+        </div>                   
+        </header>
+        <!---final header ---------------------->
+        <!------------------------->
+        <div>
+                <input type="checkbox" name="contactenos" id="contac">
+                <div class="contactenos">
+                    
+                    <form action="">
+                        <label for="contac"  style= "display:flex;width: 100%; justify-content: end;" ><i class="fa-sharp fa-solid fa-xmark" style="color: white;" ></i>
+                        </label>
+                        <h4 style="font-size: 50px; text-align: center;">Contactenos</h4>
+                        <label for="nomrbre">Nombre </label>
+                        <input type="text" name="nombre" id="">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="">
+                        <label for="email">Correo electrinico</label>
+                        <input type="email" name="email" id="">
+                        <label for="mensaje">Escribe un mensaje</label>
+                        <textarea name="mensaje" id="" cols="30" rows="10" style="width: 100%;"></textarea>
+                        <button type="submit" style="width: 80px; margin-top: 20px;">Enviar</button>
+
+
+
+                    </form>
                 </div>
-            </div>  
-        </section>
+                
+        </div>
+
+
+
+
+
+
+
+         <!------------------------->
+
+
+
         
+        <main>
+        <!------------------incio  section prinicpal ----------------------->
+        <section class="portada">
+                <label for="principal">    
+                    <input type="radio" name="presentado" id="principal" checked>        
+                    <div class="principal">                
+                        <div class="principal--opaco"></div>
+                        <div class="principal--info">
+                                    <h1>Cooperación con la  Estacion internacional</h1>
+                                    <p>Desde el  2028 FLAES cooperará con la ISS  en investigacion y desarrollo de modulos habitaciones.</p>
+                                    <a class="boton" href="">Ver mas</a>
+                        </div>
+                    </div>            
+                </label>
+                <label for="secundario">
+                    <input type="radio" name="presentado" id="secundario">    
+                    <div class="secundario">
+                        <div class="principal--opaco"></div>
+                            <div class="principal--info">
+                                    <h1>Busqueda de vida inteligente </h1>
+                                    <p>Investigacion en la busqueda de vida inteligente extra solar </p>
+                                    <a class="boton" href="">Ver mas</a>
+                            </div>
+                    </div>
+                </label>
+
+        </section>
+    <!------------------final section ----------------------->
+<!-------------section conocenos----------->
+   <section  id="conocenos">
+        <div class="conocenos">
+          <div class="conocenos--info">
+            <h1>Organizacion inter-gubernarmental de america del sur y el caribe</h1>
+            <P>Organizacion responsable del programa espacial civil, así como de las investigaciones aeronáutica y aeroespacial 
+                desde el 2023  es la principal institución de investigación de latinoamerica, el campo aeroespacial. 
+            </P>
+            <a class="boton" href="">Ver mas</a>
+        </div>
+          
+        </div>    
+
+    </section>
+
+    <!------------------inicio section noticias  ----------------------->
+
+        <section id="Noticias--section">
+            
+            <div class="noticias">Noticias</div>
+            <div class="news">
+                <div class="noticia">
+                    <img src="./assets/noticias/sol.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/satelite.jpg" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/cometa.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/lan.chino.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/marte.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/microbianos.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/ondas.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="./assets/noticias/roscosmos.jfif" alt="">
+                    <div class="noticia--info">
+                        <h1>Manchas solares aumentan peligrosamente</h1>
+                        <p>La nasa advierte de un aumento inusual de las machas solares </p>
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+                <div class="noticia noticias--vermas">
+                    <div class="noticia--info ">                    
+                        <a class="boton" href="">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!------------------inicio misiones  ----------------------->
+
+        <section id="Misiones">
+            <div class="mi">
+                
+                <div class="menu--misiones">
+                    <h1>Misiones</h1>
+                    <label for="liber">
+                        <img  class="icono"   src="./assets/iconos/Satellite-icon.png" alt="">
+                        <p class="misiones--menu-font">liberwebb</p>
+                    </i></label>
+                    <label for="sur">
+                        <img class="icono" src="./assets/iconos/comos.png" alt="">
+                        <p class="misiones--menu-font">Surbble</p>
+                    </label>
+                    <label for="ees">
+                        <img class="icono" src="./assets/iconos/iss.png" alt="">
+                        <p class="misiones--menu-font">EES</p>
+                    </label>
+                    <label for="tele">
+                        <img class="icono" src="./assets/iconos/telescopio.png" alt="">
+                        <p class="misiones--menu-font">Telescopios</p>
+                    </label>
+                    
+                </div>
+                <input type="radio" name="mostar" id="liber" checked>
+                <input type="radio" name="mostar" id="sur">
+                <input type="radio" name="mostar" id="ees">
+                <input type="radio" name="mostar" id="tele">
+                <div class="liberwebb">
+                    <h1>Telescopio liberwebb</h1>
+                    <p> Inicio de mision  octube de 2023 </p>
+                </div>
+                <div class="sur">
+                    <h1>Telescopio Surbble</h1>
+                    <p> Inicio de mision  octube de 2028 </p>
+                </div>   
+                <div class="ees">
+                    <h1 >Estacion espacil Sudamericana </h1>
+                    <p> Inicio de mision  octube de 2020</p>
+                </div>
+                <div class="tele">
+                    <h1>Telescopio Ander egg</h1>
+                    <p> Construido el 26 de Mayo de  2022 </p>
+                </div>
+
+            </div>
+        </section>
+        <footer>
+            <p>Copyrigth  by student NUCBA</p>
+        </footer>
+
+
+
+
+
+
 
     </main>
     <footer>
